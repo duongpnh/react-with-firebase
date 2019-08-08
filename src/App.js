@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import {withAuthentication} from './components/Session';
+import SideBar from './components/SideBar';
+import ContentArea from './components/ContentArea';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    // Switch in react-router-dom need to use an exact path for "/" otherwise it will also match "/..."
+    // And it won't work
+    return (
+      <Router>
+        <Navigation />
+        <div className="sidebar">
+          <SideBar />
+        </div>
+        <div className="content-area">
+          <ContentArea />
+        </div>
+      </Router>
+    );
 }
 
-export default App;
+export default withAuthentication(App);

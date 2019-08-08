@@ -1,0 +1,12 @@
+
+.subject {
+    width: 50%;
+    height: 100px;
+    background: #00CCFF;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 70% 0%);
+  }
