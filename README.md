@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Firebase with ReactJS
+
+>Only create-react-app (not Redux) and Firebase
+
+Project's Funtionality: Login, logout, reset password, display current user and manage users through firebase' realtime database.
 
 ## Available Scripts
 
